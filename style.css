@@ -1,0 +1,144 @@
+:root {
+    --main-bg-color: hsl(30, 38%, 92%);
+    --info-bg-color: hsl(0, 0%, 100%);
+    --price-and-button-color: hsl(158, 36%, 37%);
+    --button-active-color: rgb( 36 63 50);
+    --main-text-color: hsl(212, 21%, 14%);
+    --secondary-text-color: hsl(228, 12%, 48%);
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-large: 30px;
+    --font-primary: "Fraunces", serif;
+    --font-secondary: "Montserrat", sans-serif;
+    --paragraph-font-size: 14px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    background-color: var(--main-bg-color);
+    font-family: var(--font-secondary);
+}
+
+#main-container {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#info-container {
+    height: 450px;
+    width: 300px;
+    background-color: var(--info-bg-color);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    border-radius: 10px 0 0 10px;
+}
+
+#info-text {
+    padding: var(--padding-large);
+}
+
+#category {
+    font-size: var(--paragraph-font-size);
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+h1 {
+    font-family: var(--font-primary);
+    color: var(--main-text-color);
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1;
+    padding: var(--padding-large) 0;
+}
+
+p {
+    font-size: var(--paragraph-font-size);
+    color: var(--secondary-text-color);
+}
+
+#price-container {
+    display: flex; 
+    align-items: center; 
+    gap: 15px;
+    padding: var(--padding-large) 0;
+}
+
+#price-discounted {
+    color: var(--price-and-button-color);
+    font-family: var(--font-primary);
+    gap: 15px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#price-original {
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: var(--paragraph-font-size);
+    color: var(--secondary-text-color);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--price-and-button-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--info-bg-color);
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    padding: 15px 0;
+}
+
+button svg {
+    fill: white;
+    padding-right: var(--padding-small);
+}
+
+button:hover, button:active {
+    background-color: var(--button-active-color);
+}
+
+button:active {
+    transform: translateY(4px);
+}
+
+
+@media only screen and (max-width: 650px) {
+    
+    #main-container {
+        flex-direction: column;
+        align-items: center;
+        padding: var(--padding-medium) 0;
+    }
+    
+    img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #info-container {
+        width: 340px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    h1 {
+        padding: var(--padding-medium) 0;
+    }
+}
