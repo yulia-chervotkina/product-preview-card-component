@@ -24,6 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
+![](images/Solution.png)
+
 ## My process
 
 ### Built with
